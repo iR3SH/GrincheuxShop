@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+
+.mat-mdc-menu-panel{
+  width: 10rem !important;
+}
+.mainDiv{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  height: 50rem;
+}
+.margin-form {
+  margin: 1rem 1rem 1rem 1rem;
+}
+.form-element-100 {
+  width: 100%;
+}
+.card-custom {
+  width: 10rem;
+}
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1920px;
+  margin-top: 3rem;
+}

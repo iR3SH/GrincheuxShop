@@ -13,6 +13,6 @@ export class ProfileService extends BaseApiService{
   }
 
   changeInfos(user: any): Observable<any> {
-    return this.patch('/api/user',user)
+    return this.patch('api/user',user)
   }
 }

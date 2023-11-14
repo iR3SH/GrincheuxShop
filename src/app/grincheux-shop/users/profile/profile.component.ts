@@ -10,7 +10,7 @@ import {Router} from "@angular/router";
 export class ProfileComponent implements OnInit{
   currentUser : any;
   @ViewChild("sidenav") child : any
-    constructor(private loginService : LoginService, private router : Router) {
+    constructor(private loginService : LoginService) {
     }
     ngAfterViewInit() {
       this.child.toggle();
@@ -18,9 +18,7 @@ export class ProfileComponent implements OnInit{
     ngOnInit() {
       this.loginService.me().subscribe({
         next: (currentUser) => {
-          console.log(currentUser)
           this.currentUser = currentUser;
-          console.log(this.currentUser)
         }
       });
     }

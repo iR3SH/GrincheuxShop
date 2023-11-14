@@ -36,8 +36,9 @@ export class LoginService extends BaseApiService{
       if(!!LoginService.getToken()) {
         this.get('api/auth/me').subscribe({
           next: (user) => {
-            obs.next(user);
             this.user = user;
+            console.log(user);
+            obs.next(user);
           }
         });
       }  else {
@@ -54,8 +55,5 @@ export class LoginService extends BaseApiService{
   }
   static removeToken() {
     localStorage.removeItem('token');
-  }
-  getUser() {
-      return this.user;
   }
 }

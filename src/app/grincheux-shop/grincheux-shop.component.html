@@ -1,0 +1,32 @@
+<div class="header">
+  <div class="centerTitle" (click)="redirectHome()">
+    <img src="/assets/img/grincheux.png" class="grinch-icon reverse" alt=""/>
+    <h1 class="mainTitle">Bienvenue sur {{ title }}</h1>
+    <img src="/assets/img/grincheux.png" class="grinch-icon" alt=""/>
+  </div>
+  <div class="icon-menu">
+    <button mat-icon-button><mat-icon color="primary">shopping_basket</mat-icon></button>
+    <mat-menu #profileMenu="matMenu">
+      <ng-container *ngIf="currentUser; else noLogged">
+        <button mat-menu-item (click)="redirectProfile()"><mat-icon color="primary">account_circle</mat-icon>Profile</button>
+        <button mat-menu-item (click)="logout()"><mat-icon color="primary">input</mat-icon>Logout</button>
+      </ng-container>
+      <ng-template #noLogged>
+        <button mat-menu-item (click)="redirectLogin()"><mat-icon color="primary">account_circle</mat-icon>Login</button>
+        <button mat-menu-item (click)="redirectRegister()"><mat-icon color="primary">how_to_reg</mat-icon>Register</button>
+      </ng-template>
+    </mat-menu>
+    <button mat-icon-button [matMenuTriggerFor]="profileMenu">
+      <mat-icon color="primary">account_circle</mat-icon>
+    </button>
+  </div>
+</div>
+<ng-toast></ng-toast>
+<div class="main-container-fluid">
+    <router-outlet></router-outlet>
+</div>
+<div class="footer">
+  <div class="center-component">
+    <p class="mb-0">Grincheux Shop</p>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="mainDiv">
+  <form method="POST" class="form-register">
+    <div class="margin-form">
+      <mat-form-field class="form-element-100">
+        <mat-label>Nom d'utilisateur</mat-label>
+        <input matInput placeholder="Ex. Pizza" value="" name="username" [(ngModel)]="newUser.username">
+      </mat-form-field>
+      <br/>
+      <mat-form-field class="form-element-100">
+        <mat-label>Nom</mat-label>
+        <input matInput placeholder="Ex. Pizza" value="" name="lastName" [(ngModel)]="newUser.lastName">
+      </mat-form-field>
+      <br/>
+      <mat-form-field class="form-element-100">
+        <mat-label>Prénom</mat-label>
+        <input matInput placeholder="Ex. Pizza" value="" name="firstName" [(ngModel)]="newUser.firstName">
+      </mat-form-field>
+      <br/>
+      <mat-form-field class="form-element-100">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput name="email" [(ngModel)]="newUser.email"
+               placeholder="Ex. pat@example.com"/>
+      </mat-form-field>
+      <br/>
+      <mat-form-field class="form-element-100">
+        <mat-label>Mot de passe</mat-label>
+        <input type="password" matInput placeholder="Ex. Pizza" value="" name="password" [(ngModel)]="newUser.password">
+      </mat-form-field>
+      <br/>
+      <button class="form-element-100" type="button" mat-raised-button color="primary" (click)="sendToApi()">S'inscrire</button>
+    </div>
+  </form>
+</div>

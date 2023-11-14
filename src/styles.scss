@@ -30,6 +30,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .cards-container {
   display: flex;
   justify-content: space-around;
-  max-width: 1920px;
   margin-top: 3rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.example-card {
+  max-width: 200px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+.icon-menu{
+  margin-left: auto;
 }

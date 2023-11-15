@@ -1,5 +1,5 @@
 <div class="mainDiv" *ngIf="currentUser">
-  <form method="POST" class="form-register">
+  <form method="POST" class="form-infos">
     <div class="margin-form">
       <mat-form-field class="form-element-100">
         <mat-label>Nom d'utilisateur</mat-label>
@@ -18,8 +18,7 @@
       <br/>
       <mat-form-field class="form-element-100">
         <mat-label>Email</mat-label>
-        <input type="email" matInput name="email" value="{{currentUser.email}}"  [(ngModel)]="currentUser.email"
-               placeholder="Ex. pat@example.com"/>
+        <input type="email" matInput name="email" value="{{currentUser.email}}"  [(ngModel)]="currentUser.email" placeholder="Ex. pat@example.com"/>
       </mat-form-field>
       <br/>
       <mat-form-field class="form-element-100">

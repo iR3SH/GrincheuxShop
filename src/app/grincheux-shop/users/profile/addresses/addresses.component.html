@@ -1,1 +1,19 @@
-<p>addresses works!</p>
+<div class="mainDiv">
+  <ng-container *ngIf="addresses?.length && useUpdate">
+    <mat-form-field class="top-field">
+      <mat-label>Vos addresses</mat-label>
+        <mat-select>
+            <mat-option *ngFor="let addresse of addresses" [value]="addresse" (onSelectionChange)="changeModel(addresse)">{{addresse.label}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-mini-fab color="primary" class="add-button" (click)="setUpdate(false)">+</button>
+  </ng-container>
+  <form class="middleField" *ngIf="selectedAddress">
+    <mat-form-field class="form-element-100">
+      <mat-label>Adresse</mat-label>
+      <input matInput placeholder="Ex. 4 Rue de la Pizza" [(ngModel)]="selectedAddress.address" id="address" name="address">
+    </mat-form-field>
+    <br/>
+    <button class="form-element-100" type="button" mat-raised-button color="primary" (click)="updateAddress()">Enregistrer mes modifications</button>
+  </form>
+</div>

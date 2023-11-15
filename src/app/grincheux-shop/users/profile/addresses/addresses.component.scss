@@ -1,0 +1,18 @@
+.top-field{
+  align-self: flex-start;
+  display: flex;
+  justify-content: flex-start;
+}
+.mainDiv{
+  justify-content: normal !important;
+}
+.middleField {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 52vh;
+}
+.add-button{
+  align-self: flex-start;
+  margin-top: 1vh;
+  margin-left: 1vh;
+}

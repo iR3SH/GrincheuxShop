@@ -15,4 +15,11 @@ export class ProfileService extends BaseApiService{
   changeInfos(user: any): Observable<any> {
     return this.patch('api/user',user)
   }
+  getAddresses(): Observable<any> {
+    return this.get('api/mailingaddress/')
+  }
+
+  updateAddress(selectedAddress: any) : Observable<any> {
+    return this.patch('api/mailingaddress', selectedAddress)
+  }
 }

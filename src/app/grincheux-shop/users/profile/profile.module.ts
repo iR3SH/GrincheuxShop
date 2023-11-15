@@ -4,7 +4,7 @@ import { InfosComponent } from './infos/infos.component';
 import { AddressesComponent } from './addresses/addresses.component';
 import { DeliveryComponent } from './delivery/delivery.component';
 import {RouterModule, Routes} from "@angular/router";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
@@ -14,6 +14,7 @@ import {MatListModule} from "@angular/material/list";
 import {MatIconModule} from "@angular/material/icon";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatTooltipModule} from "@angular/material/tooltip";
+import {MatSelectModule} from "@angular/material/select";
 
 const routes : Routes = [
   {
@@ -58,7 +59,9 @@ const routes : Routes = [
     MatListModule,
     MatIconModule,
     MatExpansionModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSelectModule,
+    ReactiveFormsModule
   ]
 })
 export class ProfileModule { }

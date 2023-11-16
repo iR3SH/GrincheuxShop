@@ -5,6 +5,7 @@
     <img src="/assets/img/grincheux.png" class="grinch-icon" alt=""/>
   </div>
   <div class="icon-menu">
+    <button mat-icon-button (click)="redirectShop()"><mat-icon color="primary">shopping_cart</mat-icon></button>
     <button mat-icon-button><mat-icon color="primary">shopping_basket</mat-icon></button>
     <mat-menu #profileMenu="matMenu">
       <ng-container *ngIf="currentUser; else noLogged">

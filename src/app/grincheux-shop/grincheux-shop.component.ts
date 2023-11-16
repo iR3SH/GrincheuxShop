@@ -54,4 +54,8 @@ export class GrincheuxShopComponent {
   redirectProfile() {
     this.router.navigateByUrl('/user/profile')
   }
+
+  redirectShop() {
+    this.router.navigateByUrl('/shop')
+  }
 }

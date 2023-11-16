@@ -9,6 +9,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {FaIconComponent} from "@fortawesome/angular-fontawesome";
 import {NgToastModule} from "ng-angular-popup";
 import {MatCardModule} from "@angular/material/card";
+import { ShopComponent } from './shop/shop.component';
 const routes: Routes = [{
   path : '',
   component: GrincheuxShopComponent,
@@ -20,6 +21,10 @@ const routes: Routes = [{
     {
       path: 'user',
       loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
+    },
+    {
+      path: 'shop',
+      loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule)
     }
   ]
 }];

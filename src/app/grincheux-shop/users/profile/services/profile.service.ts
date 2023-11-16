@@ -22,4 +22,7 @@ export class ProfileService extends BaseApiService{
   updateAddress(selectedAddress: any) : Observable<any> {
     return this.patch('api/mailingaddress', selectedAddress)
   }
+  newAddress(newAddresse : any): Observable<any> {
+    return this.post('api/mailingaddress', newAddresse)
+  }
 }

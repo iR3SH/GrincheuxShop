@@ -6,7 +6,7 @@
             <mat-option *ngFor="let addresse of addresses" [value]="addresse" (onSelectionChange)="changeModel(addresse)">{{addresse.label}}</mat-option>
         </mat-select>
     </mat-form-field>
-    <button mat-mini-fab color="primary" class="add-button" (click)="setUpdate(false)">+</button>
+    <button mat-mini-fab color="primary" class="add-button" (click)="toogleModal()">+</button>
   </ng-container>
   <form class="middleField" *ngIf="selectedAddress">
     <mat-form-field class="form-element-100">
@@ -17,3 +17,23 @@
     <button class="form-element-100" type="button" mat-raised-button color="primary" (click)="updateAddress()">Enregistrer mes modifications</button>
   </form>
 </div>
+<ng-template #modalAddAddress>
+  <div class="modalAddress">
+    <form>
+      <mat-form-field class="top-field">
+        <mat-label>Type d'adresse</mat-label>
+        <mat-select [(ngModel)]="newAddress.label" name="label" >
+          <mat-option value="home">Home</mat-option>
+          <mat-option value="work">Work</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="form-element-100">
+        <mat-label>Adresse</mat-label>
+        <input matInput placeholder="Ex. 4 Rue de la Pizza" [(ngModel)]="newAddress.address" name="address">
+      </mat-form-field>
+      <div class="modal-button">
+        <button mat-raised-button color="primary" (click)="newAdresse()">Ajouter une nouvelle addresse</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

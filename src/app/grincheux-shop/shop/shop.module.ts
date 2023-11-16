@@ -20,20 +20,8 @@ const routes : Routes = [
     component: ShopComponent,
     children: [
       {
-        path: 'computers',
-        component: ComputersComponent
-      },
-      {
-        path: 'laptops',
-        component: LaptopsComponent
-      },
-      {
-        path: 'smartphones',
-        component: SmartphonesComponent
-      },
-      {
-        path: 'pickaxes',
-        component: PickaxesComponent
+        path: 'categorie',
+        loadChildren: () => import('./categorie/categorie.module').then(m => m.CategorieModule)
       }
     ]
   }

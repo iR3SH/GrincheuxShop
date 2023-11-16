@@ -21,6 +21,9 @@
     cursor: pointer;
   }
 }
+.search-field{
+  justify-content: center;
+}
 
 .grinch-icon {
   max-height: 100%;
@@ -61,4 +64,9 @@
 }
 p {
   margin-bottom: unset !important;
+}
+.search-bar {
+  display: inline-flex;
+  margin-left: 70vw;
+  margin-top: 2vh;
 }

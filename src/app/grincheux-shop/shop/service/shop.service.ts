@@ -10,4 +10,8 @@ export class ShopService extends BaseApiService {
   constructor(httpClient: HttpClient) {
     super(httpClient, '')
   }
+
+  getProductsFromCateg(categId : Number){
+    return this.get('api/categories/' + categId + "/products");
+  }
 }

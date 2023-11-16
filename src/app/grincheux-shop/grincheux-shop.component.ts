@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {faRegistered, faUser} from "@fortawesome/free-solid-svg-icons";
 import {Router} from "@angular/router";
 import {LoginService} from "./users/services/login.service";
+import {SearchService} from "./services/search.service";
 
 @Component({
   selector: 'app-grincheux-shop',
@@ -15,8 +16,12 @@ export class GrincheuxShopComponent {
     next: () => {
       this.loadCurrentUser();
     }
-  })
-  constructor(private router : Router, public loginService : LoginService) {
+  });
+  options : any
+  search : any = {
+    name: 'pire type'
+  }
+  constructor(private router : Router, public loginService : LoginService, private searchService : SearchService) {
 
   }
   ngOnInit(): void {
@@ -57,5 +62,20 @@ export class GrincheuxShopComponent {
 
   redirectShop() {
     this.router.navigateByUrl('/shop')
+  }
+  autoComplete() {
+    let input : any = document.getElementById("searchInput");
+    if(input !== null) {
+      this.search.name = input.value
+      this.searchService.getByNameCateg(this.search).subscribe({
+        next: (result : any) => {
+          this.options = result;
+        }
+      })
+      console.log(this.options);
+    }
+  }
+  onSearchChange() {
+    console.log(this.search.name)
   }
 }

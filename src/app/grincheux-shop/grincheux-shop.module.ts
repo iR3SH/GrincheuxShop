@@ -10,6 +10,10 @@ import {FaIconComponent} from "@fortawesome/angular-fontawesome";
 import {NgToastModule} from "ng-angular-popup";
 import {MatCardModule} from "@angular/material/card";
 import { ShopComponent } from './shop/shop.component';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatInputModule} from "@angular/material/input";
+import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 const routes: Routes = [{
   path : '',
   component: GrincheuxShopComponent,
@@ -34,16 +38,21 @@ const routes: Routes = [{
     GrincheuxShopComponent,
     HomeComponent
   ],
-    imports: [
-        CommonModule,
-        RouterModule.forChild(routes),
-        MatMenuModule,
-        MatButtonModule,
-        MatIconModule,
-        FaIconComponent,
-        NgOptimizedImage,
-        NgToastModule,
-        MatCardModule
-    ]
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    MatMenuModule,
+    MatButtonModule,
+    MatIconModule,
+    FaIconComponent,
+    NgOptimizedImage,
+    NgToastModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
+    FormsModule
+  ]
 })
 export class GrincheuxShopModule { }

@@ -14,4 +14,7 @@ export class ShopService extends BaseApiService {
   getProductsFromCateg(categId : Number){
     return this.get('api/categories/' + categId + "/products");
   }
+  getProductsFromName(name : any){
+    return this.post('api/search/products', name);
+  }
 }

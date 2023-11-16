@@ -29,13 +29,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .cards-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 3rem;
   gap: 1rem;
   flex-wrap: wrap;
 }
 .example-card {
-  max-width: 200px;
+  max-width: 13vw;
 }
 
 .example-header-image {
@@ -44,4 +44,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .icon-menu{
   margin-left: auto;
+}
+.primary {
+  color: #673ab7;
+}
+.mdc-card__actions {
+  justify-content: center;
+}
+.mdc-card__actions {
+  button:hover {
+    background-color: lightgray;
+  }
+}
+mat-sidenav-container {
+  border-top: black 1px inset !important;
 }

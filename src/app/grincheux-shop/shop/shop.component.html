@@ -5,24 +5,24 @@
   <mat-sidenav #sidenav mode="side" [class.mat-elevation-z4]="true" class="app-sidenav">
     <mat-nav-list>
       <mat-list-item routerLink="#">
-        <span class="menu-span-Title"><mat-icon>dashboard</mat-icon>Catégories</span>
+        <span class="menu-span-Title" ><mat-icon color="primary">dashboard</mat-icon>Catégories</span>
       </mat-list-item>
       <mat-expansion-panel [class.mat-elevation-z0]="true">
-        <mat-expansion-panel-header>
+        <mat-expansion-panel-header class="primary">
           Informatique
         </mat-expansion-panel-header>
         <mat-nav-list>
-          <span class="menu-span" routerLink="./categorie/1"><mat-icon>desktop_windows</mat-icon>Ordinateur</span>
+          <span class="menu-span" routerLink="./categorie/1"><mat-icon color="primary">desktop_windows</mat-icon>Ordinateur</span>
           <span class="menu-span" routerLink="./categorie/2"><mat-icon>computer</mat-icon>Ordinateur Portables</span>
           <span class="menu-span" routerLink="./categorie/3"><mat-icon>smartphone</mat-icon>Téléphone Portables</span>
         </mat-nav-list>
       </mat-expansion-panel>
       <mat-expansion-panel [class.mat-elevation-z0]="true">
-        <mat-expansion-panel-header>
+        <mat-expansion-panel-header class="primary">
           Utilitaire
         </mat-expansion-panel-header>
         <mat-nav-list>
-          <span class="menu-span" routerLink="./pickaxes"><mat-icon>filter_vintage</mat-icon>Pioches</span>
+          <span class="menu-span" routerLink="./categorie/4"><mat-icon>filter_vintage</mat-icon>Pioches</span>
         </mat-nav-list>
       </mat-expansion-panel>
     </mat-nav-list>

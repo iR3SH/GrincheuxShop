@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {faRegistered, faUser} from "@fortawesome/free-solid-svg-icons";
 import {Router} from "@angular/router";
 import {LoginService} from "./users/services/login.service";
 import {SearchService} from "./services/search.service";
@@ -19,7 +18,6 @@ export class GrincheuxShopComponent {
   });
   options : any
   search : any = {
-    name: 'pire type'
   }
   constructor(private router : Router, public loginService : LoginService, private searchService : SearchService) {
 
@@ -75,7 +73,11 @@ export class GrincheuxShopComponent {
       console.log(this.options);
     }
   }
-  onSearchChange() {
-    console.log(this.search.name)
+  searchCateg() {
+    for(let opt of this.options){
+      if(opt.name === this.search.name){
+        this.router.navigateByUrl('/shop/categorie/' + opt.id)
+      }
+    }
   }
 }

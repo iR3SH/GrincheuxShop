@@ -7,7 +7,7 @@
   height: 4rem;
   align-items: center;
   background-color: #f9f9f9;
-  border-bottom: black 1px solid;
+  border-bottom: black 1px inset;
 }
 .centerTitle{
   position: absolute;
@@ -51,7 +51,7 @@
   align-content: flex-end;
   height: 2.2rem;
   background-color: #f9f9f9;
-  border-top: black 1px solid;
+  border-top: black 1px inset;
 }
 .center-component {
   position: absolute;
@@ -69,4 +69,17 @@ p {
   display: inline-flex;
   margin-left: 70vw;
   margin-top: 2vh;
+}
+.icon-search {
+  z-index: 999;
+}
+.icon-search:hover {
+  border:black 1px solid;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.title-search {
+  font-family: "Open Sans Italic", serif ;
+  font-weight: bold;
+  border-bottom: black 1px inset;
 }

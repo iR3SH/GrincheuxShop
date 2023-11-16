@@ -8,11 +8,10 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatListModule} from "@angular/material/list";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatTooltipModule} from "@angular/material/tooltip";
-import { ComputersComponent } from './computers/computers.component';
-import { LaptopsComponent } from './laptops/laptops.component';
-import { SmartphonesComponent } from './smartphones/smartphones.component';
-import { PickaxesComponent } from './pickaxes/pickaxes.component';
 import {MatCardModule} from "@angular/material/card";
+import { SearchComponent } from './search/search.component';
+import { ProductsComponent } from './products/products.component';
+import {MatTableModule} from "@angular/material/table";
 
 const routes : Routes = [
   {
@@ -22,18 +21,24 @@ const routes : Routes = [
       {
         path: 'categorie',
         loadChildren: () => import('./categorie/categorie.module').then(m => m.CategorieModule)
+      },
+      {
+        path: 'products',
+        component: ProductsComponent
+      },
+      {
+        path: 'search',
+        component: SearchComponent
       }
     ]
-  }
+  },
 ]
 
 @NgModule({
   declarations: [
     ShopComponent,
-    ComputersComponent,
-    LaptopsComponent,
-    SmartphonesComponent,
-    PickaxesComponent
+    SearchComponent,
+    ProductsComponent,
   ],
   imports: [
     CommonModule,
@@ -44,7 +49,8 @@ const routes : Routes = [
     MatListModule,
     MatSidenavModule,
     MatTooltipModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule
   ]
 })
 export class ShopModule { }

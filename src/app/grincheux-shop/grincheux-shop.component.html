@@ -6,10 +6,11 @@
   </div>
   <div class="search-bar">
     <mat-form-field class="search-field">
-      <mat-icon matSuffix>search</mat-icon>
-      <input class="toolbar-search" type="text" id="searchInput" placeholder="Rechercher..." (ngModelChange)="onSearchChange()" [(ngModel)]="search.name" (keydown)="autoComplete()" matInput [matAutocomplete]="auto">
+      <mat-icon matSuffix (click)="searchCateg()" class="icon-search">search</mat-icon>
+      <input class="toolbar-search" type="text" id="searchInput" placeholder="Rechercher..." [(ngModel)]="search.name" (keydown)="autoComplete()" matInput [matAutocomplete]="auto">
       <mat-autocomplete #auto="matAutocomplete">
         <ng-container *ngIf="options?.length">
+          <mat-option class="title-search" readonly="true">Catégories</mat-option>
           <mat-option *ngFor="let option of options" [value]="option.name">
             {{option.name}}
           </mat-option>
